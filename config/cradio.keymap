@@ -7,7 +7,7 @@
 #include "mac_ansi_italian.keycodes"
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht FUN k2  &ht MOUSE k3  &ht MOUSE k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht FUN k2  &ht LGUI k3  &ht LSHFT k4
 #define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
 #define HRMR(k1,k2,k3,k4) &ht NAVLEFT k1  &ht SYM k2  &ht NUM k3  &ht RSHFT k4
 #define HRMRB(k1,k2,k3) &ht RALT k1  &ht RCTRL k2  &ht RGUI k3
@@ -17,10 +17,9 @@
 #define LOWER   1 // accents, right nav, cut copy and paste, command, del
 #define RAISE   2
 #define FUN     3
-#define MOUSE   4
-#define NAVLEFT 5
-#define SYM     6
-#define NUM     7
+#define NAVLEFT 4
+#define SYM     5
+#define NUM     6
 
 / {
     behaviors {
@@ -71,20 +70,20 @@
         lower_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  CMD(Q)  │  CMD(W)  │  SPACE   │  CMD(R)  │ CMD(T)   │   │    é     │    ù     │    ì     │    ò     │    à     │     
+        //│  CMD(Q)  │  CMD(W)  │  SPACE   │  CMD(R)  │  CMD(T)  │   │    é     │    ù     │    ì     │    ò     │    à     │     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │    è     │   LEFT   │   DOWN   │   UP     │   RIGHT  │
+        //│  LCTRL   │   LALT   │  LGUI    │  LSHFT   │          │   │    è     │   LEFT   │   DOWN   │   UP     │   RIGHT  │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │   CUT    │   COPY   │   PASTE  │          │   │          │          │    <     │    >     │          │
+        //│          │   CUT    │  COPY    │  PASTE   │          │   │          │          │    <     │    >     │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │  ----    │   │          │   DEL    │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
            &kp  LG(Q)  &kp LG(W)  &kp SPACE  &kp LG(R)   &kp LG(T)   &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
+          	
+           &kp LCTRL   &kp LALT   &kp LGUI   &kp LSHFT   &trans      &kp IT_EGRV &kp LARW    &kp DARW    &kp UARW    &kp RARW
           
-           &trans      &trans     &trans     &trans      &trans      &kp IT_EGRV &kp LARW    &kp DARW    &kp UARW    &kp RARW
-          
-           &trans      &kp K_CUT  &kp K_COPY &kp K_PASTE &trans      &trans      &trans      &kp IT_LABK &kp IT_RABK &trans
+           &trans      &kp LG(X)  &kp LG(C)  &kp LG(V)   &trans      &trans      &trans      &kp IT_LABK &kp IT_RABK &trans
           
                                              &trans      &none       &trans      &kp DEL
 
@@ -135,30 +134,6 @@
 
                                               &trans      &trans        &trans     &trans   
 
-
-            >;
-        };
-
-        mouse_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │  ----    │          │          │   │          │          │          │          │          │
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │          │   │          │          │
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-
-
-         &trans         &trans      &trans   &trans      &trans        &trans     &trans     &trans     &trans     &trans
-
-         &trans         &trans      &none    &trans      &trans        &trans     &trans     &trans     &trans     &trans 
-
-         &trans         &trans      &trans   &trans      &trans        &trans     &trans     &trans     &trans     &trans
-
-                                             &trans      &trans        &trans     &trans  
 
             >;
         };
