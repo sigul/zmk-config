@@ -67,36 +67,52 @@
         lower_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  CMD(Q)  │  CMD(W)  │  SPACE   │  CMD(R)  │ CMD(T)   │   │     é    │    ù     │    ì     │    ò     │    à     │
-           &kp LGUI(Q) &kp LGUI(W) &kp SPACE &kp LGUI(R) &kp LGUI(Q)      &trans     &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
+        //│  CMD(Q)  │  CMD(W)  │  SPACE   │  CMD(R)  │ CMD(T)   │   │    é     │    ù     │    ì     │    ò     │    à     │     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │    è     │    LEFT  │   DOWN   │   UP     │   RIGHT  │
-            &trans      &trans      &trans     &trans      &trans     &kp IT_EGRV &kp LARW    &kp DARW    &kp UARW    &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │   CUT    │   COPY   │   PASTE  │          │   │          │          │    <     │    >     │          │
-            &trans      &kp K_CUT   &kp K_COPY &kp K_PASTE &trans     &trans      &trans    &kp IT_LABK &kp IT_RABK  &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                               &trans     &none       &trans      &kp DEL 
+                                           │          │          │   │          │   DEL    │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+
+           &kp LGUI(Q) &kp LGUI(W) &kp SPACE  &kp LGUI(R) &kp LGUI(Q) &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
+          
+           &trans      &trans      &trans     &trans      &trans      &kp IT_EGRV &kp LARW    &kp DARW    &kp UARW    &kp RARW
+          
+           &trans      &kp K_CUT   &kp K_COPY &kp K_PASTE &trans      &trans      &trans      &kp IT_LABK &kp IT_RABK &trans
+          
+                                               &trans     &none       &trans      &kp DEL
+
             >;
         };
 
         raise_layer {
             bindings = <
+        
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│          │          │     :    │   ESC    │          │   │          │          │   DEL    │   BSPC   │  DEL     │            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //│  LOCK    │    %     │     /    │   ENT    │          │   │   DF1    │   MPLY   │   VOLD   │   VOLU   │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //│          │          │          │    !     │          │   │   DF0    │          │   BRID   │   BRIU   │  RESET   │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+        //                                 │          │   TAB    │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+
+         &trans      &trans      &kp IT_COLN &kp ESC     &trans         &trans   &trans      &kp DEL    &kp BSPC   &kp DEL
+
+         &kp LOCK    &kp IT_PERC &kp IT_SLSH &kp ENT     &trans         DF(1)    &kp MPLY    &kp VOLD   &kp VOLU   &trans
+
+         &trans      &trans      &trans      &kp IT_EXLM &trans         DF(0)    &trans      &kp BRID   &kp BRIU   RESET
+
+                                             &trans      &kp TAB        &none   &trans 
             >;
         };
+
+     
+
+
 
         layer3_layer {
             bindings = <
