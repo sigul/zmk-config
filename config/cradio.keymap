@@ -59,11 +59,11 @@
         //                                 │  TAB     │LOWER ENT │   │RAISE SPC │   BSPC   │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             
-            &kp IT_Q    &kp IT_W   &kp IT_E   &kp IT_R   &kp IT_T     &kp IT_Y   &kp IT_U   &kp IT_I      &kp IT_O  &kp IT_P      
+            &kp IT_Q    &kp IT_W   &kp IT_E   &kp IT_R   &kp IT_T     &kp IT_Y   &kp IT_U   &kp IT_I       &kp IT_O &kp IT_P      
 
-            HRML(IT_A,  IT_S,      IT_D,      IT_F)      &kp IT_G     &kp IT_H   HRMR(IT_J, IT_K,         IT_L,     IT_QUOT)
+            HRML(IT_A,  IT_S,      IT_D,      IT_F)      &kp IT_G     &kp IT_H   HRMR(IT_J, IT_K,          IT_L,    IT_QUOT)
 
-            HRMLB(IT_Z, IT_X,      IT_C)      &kp IT_V   &kp IT_B     &kp IT_N   &kp IT_M   HRMRB(IT_COMM, IT_DOT,   IT_SLSH)
+            HRMLB(IT_Z, IT_X,      IT_C)      &kp IT_V   &kp IT_B     &kp IT_N   &kp IT_M   HRMRB(IT_COMM, IT_DOT,  IT_SLSH)
                                               
                                          &kp TAB    &lt LOWER ENTER  &lt RAISE SPACE  &kp BSPC
             >;
@@ -145,7 +145,7 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │   BTN2   │  ----    │   BTN1   │          │   │          │          │          │          │          │
+        //│          │          │  ----    │          │          │   │          │          │          │          │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
@@ -153,11 +153,11 @@
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
 
-         &trans         &trans      &trans   &trans      &trans        &trans     &kp BTN1   &kp WH_U   &kp BTN2   &trans
+         &trans         &trans      &trans   &trans      &trans        &trans     &trans     &trans     &trans     &trans
 
-         &trans         &kp BTN2    &none    &kp BTN1    &trans        &trans     &kp MS_L   &kp MS_D   &kp MS_U   &kp MS_R
+         &trans         &trans      &none    &trans      &trans        &trans     &trans     &trans     &trans     &trans 
 
-         &trans         &trans      &trans   &trans      &trans        &trans     &kp WH_L   &kp WH_D   &kp WH_R   &trans
+         &trans         &trans      &trans   &trans      &trans        &trans     &trans     &trans     &trans     &trans
 
                                              &trans      &trans        &trans     &trans  
 
