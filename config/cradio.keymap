@@ -107,7 +107,7 @@
 
          &trans      &trans      &kp IT_COLN &kp ESC     &trans         &trans   &trans      &kp DEL    &kp BSPC   &kp DEL
 
-         &kp CAPS    &kp IT_PERC &kp IT_SLSH &kp ENT     &trans         DF(1)    &kp MPLY    &kp VOLD   &kp VOLU   &trans
+         &kp CAPS    &kp IT_PERC &kp IT_SLSH &kp ENTER   &trans         DF(1)    &kp MPLY    &kp VOLD   &kp VOLU   &trans
 
          &trans      &trans      &trans      &kp IT_EXLM &trans         DF(0)    &trans      &kp BRID   &kp BRIU   RESET
 
