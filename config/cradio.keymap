@@ -73,10 +73,10 @@
         //│          │          │          │          │          │   │    è     │    LEFT  │   DOWN   │   UP     │   RIGHT  │
             &trans      &trans      &trans     &trans      &trans     &kp IT_EGRV &kp LARW    &kp DARW    &kp UARW    &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │   CUT    │   COPY   │   PASTE  │          │   │          │          │          │          │          │
-            &trans      &kp K_CUT   &kp K_COPY &kp K_PASTE &trans     &trans      &trans      &trans      &trans      &trans
+        //│          │   CUT    │   COPY   │   PASTE  │          │   │          │          │    <     │    >     │          │
+            &trans      &kp K_CUT   &kp K_COPY &kp K_PASTE &trans     &trans      &trans    &kp IT_LABK &kp IT_RABK  &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                               &trans     &none       &trans      &trans
+                                               &trans     &none       &trans      &kp DEL 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
