@@ -9,7 +9,7 @@
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht FUN k2  &ht MOUSE k3  &ht SYM k4
 #define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
-#define HRMR(k1,k2,k3,k4) &ht layer6 k1  &ht layer7 k2  &ht layer8 k3  &ht RSHFT k4
+#define HRMR(k1,k2,k3,k4) &ht layer6 k1  &ht layer7 k2  &ht NUM k3  &ht RSHFT k4
 #define HRMRB(k1,k2,k3) &ht RALT k1  &ht RCTRL k2  &ht RGUI k3
 
 // Layers
@@ -21,7 +21,7 @@
 #define SYM     5
 #define layer6  6
 #define layer7  7
-#define layer8  8
+#define NUM     8
 
 / {
     behaviors {
@@ -179,7 +179,7 @@
 
          &trans      &trans      &trans       &trans     &trans       &trans      &kp IT_UNDS &kp IT_PIPE &kp IT_QUOT &trans
 
-         &kp IT_CIRC &kp IT_ASTR &kp IT_AMPR  &none     &trans        &kp IT_HASH &kp IT_TILD &kp IT_BSLS &trans      &kp IT_DQUO
+         &kp IT_CIRC &kp IT_ASTR &kp IT_AMPR  &none      &trans       &kp IT_HASH &kp IT_TILD &kp IT_BSLS &trans      &kp IT_DQUO
 
          &trans      &trans      &trans       &trans     &trans       &trans      &kp IT_GRV  &kp IT_LABK &kp IT_RABK &kp IT_QUES
 
@@ -221,20 +221,26 @@
             >;
         };
 
-        layer8_layer {
+        num_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│          │          │          │          │          │   │          │          │          │          │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //│          │          │          │          │          │   │          │          │          │  ----    │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //│          │          │          │          │          │   │          │          │          │          │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+        //                                 │          │          │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+
+
+         &trans        &kp 7       &kp 8   &kp 9       &trans         &trans    &kp IT_UNDS  &kp IT_ASTR &trans    &trans
+
+         &kp 0         &kp 1       &kp 2   &kp 3       &kp IT_MINS    &trans    &kp IT_MINS  &kp IT_PLUS &none    &kp IT_DLR
+
+         &kp IT_ASTR   &kp 4       &kp 5   &kp 6       &kp IT_EQL     &trans    LALT(&kp IT_MINS) &trans &trans    &trans
+
+                                           &trans      &kp IT_COLN    &kp IT_EQL &trans   
             >;
         };
 
