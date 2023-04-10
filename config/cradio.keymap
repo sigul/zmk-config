@@ -98,20 +98,20 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │     :    │   ESC    │          │   │          │          │   DEL    │   BSPC   │  DEL     │            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  CAPS    │    %     │     /    │   ENT    │          │   │   DF1    │   MPLY   │   VOLD   │   VOLU   │          │
+        //│  CAPS    │    %     │     /    │   ENT    │          │   │          │          │   VOLD   │   VOLU   │  PLAY    │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │    !     │          │   │   DF0    │          │   BRID   │   BRIU   │  RESET   │
+        //│          │          │          │    !     │          │   │          │          │   BRID   │   BRIU   │  RESET   │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │   TAB    │   │  ----    │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
          &trans      &trans      &kp IT_COLN &kp ESC     &trans         &trans   &trans      &kp DEL    &kp BSPC   &kp DEL
 
-         &kp CAPS    &kp IT_PERC &kp IT_SLSH &kp ENTER   &trans         DF(1)    &kp MPLY    &kp VOLD   &kp VOLU   &trans
+         &kp CAPS    &kp IT_PERC &kp IT_SLSH &kp ENTER   &trans         &trans   &trans      &kp VOLD   &kp VOLU   &kp K_PLAY_PAUSE
 
-         &trans      &trans      &trans      &kp IT_EXLM &trans         DF(0)    &trans      &kp BRID   &kp BRIU   RESET
+         &trans      &trans      &trans      &kp IT_EXLM &trans         &trans   &trans      &kp BRID   &kp BRIU   RESET
 
-                                             &trans      &kp TAB        &none   &trans 
+                                             &trans      &kp TAB        &none    &trans 
             >;
         };
 
