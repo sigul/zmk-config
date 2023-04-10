@@ -242,9 +242,9 @@
 
          &trans        &kp 7       &kp 8   &kp 9       &trans         &trans    &kp IT_UNDS  &kp IT_ASTR &trans    &trans
 
-         &kp 0         &kp 1       &kp 2   &kp 3       &kp IT_MINS    &trans    &kp IT_MINS  &kp IT_PLUS &none    &kp IT_DLR
+         &kp 0         &kp 1       &kp 2   &kp 3       &kp IT_MINS    &trans    &kp IT_MINS  &kp IT_PLUS &none     &kp IT_DLR
 
-         &kp IT_ASTR   &kp 4       &kp 5   &kp 6       &kp IT_EQL     &trans    LA(&kp IT_MINS) &trans &trans    &trans
+         &kp IT_ASTR   &kp 4       &kp 5   &kp 6       &kp IT_EQL     &trans    LA(IT_MINS) &trans   &trans    &trans
 
                                            &trans      &kp IT_COLN    &kp IT_EQL &trans   
             >;
