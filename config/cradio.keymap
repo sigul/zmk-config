@@ -14,7 +14,7 @@
 
 // Layers
 #define DEFAULT 0
-#define LOWER   1 // accents and right nav and cut copy and paste and del NEED TO ADD COMMANDS
+#define LOWER   1 // accents, right nav, cut copy and paste, command, del
 #define RAISE   2
 #define FUN     3
 #define MOUSE   4
@@ -74,7 +74,7 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  CMD(Q)  │  CMD(W)  │  SPACE   │  CMD(R)  │ CMD(T)   │   │    é     │    ù     │    ì     │    ò     │    à     │     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │    è     │    LEFT  │   DOWN   │   UP     │   RIGHT  │
+        //│          │          │          │          │          │   │    è     │   LEFT   │   DOWN   │   UP     │   RIGHT  │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │   CUT    │   COPY   │   PASTE  │          │   │          │          │    <     │    >     │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
@@ -199,13 +199,13 @@
         //                                 │          │          │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
-         &trans      &trans      &kp PGUP    &trans     &trans         &trans      &trans      &trans    &trans      &trans
+         &trans      &trans      &kp PG_UP    &trans     &trans         &trans      &trans      &trans    &trans      &trans
 
-         &kp LEFT    &kp UP      &kp DOWN    &kp RGHT   &trans         &trans      &kp LALT    &none    &kp LGUI    &trans
+         &kp LEFT    &kp UP      &kp DOWN     &kp RGHT   &trans         &trans      &kp LALT    &none     &kp LGUI    &trans
 
-         &trans      &kp HOME    &kp PGDN    &kp END    &trans         &trans      &trans      &trans    &trans      &trans
+         &trans      &kp HOME    &kp PG_DN    &kp END    &trans         &trans      &trans      &trans    &trans      &trans
 
-                                             &trans     &trans         &trans      &trans 
+                                              &trans     &trans         &trans      &trans 
 
             >;
         };
