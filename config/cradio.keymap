@@ -7,9 +7,9 @@
 #include "mac_ansi_italian.keycodes"
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LSHFT k2  &ht LSHFT k3  &ht LSHFT k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LGUI k3  &ht SUP k4
 #define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
-#define HRMR(k1,k2,k3,k4) &ht NAVLEFT k1  &ht SYM k2  &ht NUM k3  &ht RSHFT k4
+#define HRMR(k1,k2,k3,k4) &ht SYM k1  &ht FUN k2  &ht NUM k3  &ht RSHFT k4
 #define HRMRB(k1,k2,k3) &ht RALT k1  &ht RCTRL k2  &ht RGUI k3
 
 // Layers
@@ -17,8 +17,8 @@
 #define LOWER   1 
 #define RAISE   2
 #define SUP     3
-#define FUN     4
-#define SYM     5
+#define SYM     4
+#define FUN     5
 #define NUM     6
 
 / {
@@ -137,31 +137,6 @@
             >;
         };
 
-
-        fun_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │    F7    │   F8     │    F9    │  F10     │
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  ----    │          │          │          │   │          │    F1    │   F2     │    F3    │  F11     │
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │    F4    │   F5     │    F6    │  F12     │
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │          │   │          │          │
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-
-         &trans         &trans      &trans    &trans      &trans        &trans     &kp F7    &kp F8     &kp F9      &kp F10
-
-         &trans         &none       &trans    &trans      &trans        &trans     &kp F1    &kp F2     &kp F3      &kp F11
-
-         &trans         &trans      &trans    &trans      &trans        &trans     &kp F4    &kp F5     &kp F6      &kp F12
-
-                                              &trans      &trans        &trans     &trans   
-
-
-            >;
-        };
-
         sym_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -182,6 +157,31 @@
 
                                              &trans      &trans      &trans       &trans      
         
+            >;
+        };
+
+        
+        fun_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │    F7    │   F8     │    F9    │  F10     │   │          │          │          │          │          │
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │    F1    │   F2     │    F3    │  F11     │   │          │          │  ----    │          │          │
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │    F4    │   F5     │    F6    │  F12     │   │          │          │          │          │          │
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                                 │          │          │   │          │          │
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+
+         &trans         &kp F7    &kp F8     &kp F9      &kp F10        &trans     &trans     &trans     &trans    &trans
+         
+         &trans         &kp F1    &kp F2     &kp F3      &kp F11        &trans     &trans     &none      &trans    &trans
+
+         &trans         &kp F4    &kp F5     &kp F6      &kp F12        &trans     &trans     &trans     &trans    &trans
+
+                                              &trans      &trans        &trans     &trans   
+
+
             >;
         };
 
