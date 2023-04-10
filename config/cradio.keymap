@@ -7,7 +7,7 @@
 #include "mac_ansi_italian.keycodes"
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht FUN k2  &ht LGUI k3  &ht LSHFT k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LSHFT k2  &ht LSHFT k3  &ht LSHFT k4
 #define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
 #define HRMR(k1,k2,k3,k4) &ht NAVLEFT k1  &ht SYM k2  &ht NUM k3  &ht RSHFT k4
 #define HRMRB(k1,k2,k3) &ht RALT k1  &ht RCTRL k2  &ht RGUI k3
