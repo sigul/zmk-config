@@ -113,7 +113,7 @@
             >;
         };
 
-	sup_layer {
+	    sup_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  BSPC    │  DEL     │          │          │   │          │          │          │          │          │
@@ -125,7 +125,7 @@
         //                                 │          │   SPACE  │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
-         &trans         &kp BSPC    &kp DEL   &trans      &trans        &trans     &trans     &trans      &trans     &trans    
+         &trans         &kp BSPC    &kp DEL   &trans      &trans        &trans     &trans     &trans      &trans      &trans    
 
          &trans         &trans      &trans    &none       &trans        &trans     &trans     &trans      &trans      &kp IT_DQUO 
 
