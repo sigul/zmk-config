@@ -18,9 +18,9 @@
 #define RAISE   2
 #define FUN     3
 #define MOUSE   4
-#define SYM1     5
+#define SYM1    5
 #define layer6  6
-#define SYM2     7
+#define SYM2    7
 #define NUM     8
 
 / {
@@ -167,11 +167,11 @@
         sym1_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
+        //│          │          │          │          │          │   │          │    _     │    |     │    '     │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │  ----    │          │   │          │          │          │          │          │
+        //│    ^     │    *     │    &     │  ----    │          │   │   #      │    ~     │    \     │          │    "     │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
+        //│          │          │          │          │          │   │          │    `     │    <     │    >     │    ?     │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │          │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -204,25 +204,26 @@
             >;
         };
 
+       
         sym2_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
+        //│          │    (     │    &     │    )     │          │   │          │          │          │          │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │ ----     │          │          │          │
+        //│    {     │    !     │    @     │    #     │    }     │   │          │ ----     │    =     │    +     │     %    │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
+        //│    [     │    $     │    %     │    ^     │    ]     │   │          │          │          │          │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │          │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
          &trans      &kp IT_LPRN &kp IT_AMPR &kp IT_RPRN &trans       &trans      &trans     &trans     &trans      &trans
 
-         &kp IT_LCBR &kp IT_EXLM &kp IT_AT   &kp IT_HASH &kp IT_RCBR  &trans      &none     &kp IT_EQL &kp IT_PLUS &kp IT_PERC
+         &kp IT_LCBR &kp IT_EXLM &kp IT_AT   &kp IT_HASH &kp IT_RCBR  &trans      &none      &kp IT_EQL &kp IT_PLUS &kp IT_PERC
 
          &kp IT_LBRC &kp IT_DLR  &kp IT_PERC &kp IT_CIRC &kp IT_RBRC  &trans      &trans     &trans     &trans      &trans
 
-                                             &kp VOLD    &trans      &trans      &kp VOLU      
+                                             &trans      &trans      &trans       &trans      
         
             >;
         };
@@ -240,13 +241,13 @@
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
 
-         &trans        &kp 7       &kp 8   &kp 9       &trans         &trans    &kp IT_UNDS  &kp IT_ASTR &trans    &trans
+         &trans        &kp 7       &kp 8      &kp 9     &trans         &trans    &kp IT_UNDS  &kp IT_ASTR &trans    &trans
 
-         &kp 0         &kp 1       &kp 2   &kp 3       &kp IT_MINS    &trans    &kp IT_MINS  &kp IT_PLUS &none     &kp IT_DLR
+         &kp 0         &kp 1       &kp 2      &kp 3     &trans         &trans    &kp IT_MINS  &kp IT_PLUS &none     &kp IT_DLR
+   
+         &trans        &kp 4       &kp 5      &kp 6     &trans         &trans    LA(IT_MINS)  &trans      &trans    &trans
 
-         &kp IT_ASTR   &kp 4       &kp 5   &kp 6       &kp IT_EQL     &trans    LA(IT_MINS) &trans   &trans    &trans
-
-                                           &trans      &kp IT_COLN    &kp IT_EQL &trans   
+                                              &trans    &kp IT_COLN    &kp IT_EQL &trans   
             >;
         };
 
