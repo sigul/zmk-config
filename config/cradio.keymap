@@ -14,7 +14,7 @@
 
 // Layers
 #define DEFAULT 0
-#define LOWER   1
+#define LOWER   1 // accents and right nav and cut copy and paste
 #define RAISE   2
 #define layer3  3
 #define layer4  4
@@ -67,16 +67,16 @@
         lower_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│          │          │          │          │          │   │     é    │    ù     │    ì     │    ò     │    à    │
+            &trans      &trans      &trans     &trans      &trans     &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│          │          │          │          │          │   │    è     │    LEFT  │   DOWN   │   UP     │   RIGHT  │
+            &trans      &trans      &trans     &trans      &trans     &kp IT_EGRV &kp LARW    &kp DARW    &kp UARW    &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│          │   CUT    │   COPY   │   PASTE  │          │   │          │          │          │          │          │
+            &trans      &kp K_CUT   &kp K_COPY &kp K_PASTE &trans     &trans      &trans      &trans      &trans      &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                               &trans     &none       &trans      &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
