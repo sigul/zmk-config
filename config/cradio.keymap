@@ -4,10 +4,24 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include "mac_ansi_italian.keycodes"
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht layer3 k2  &ht layer4 k3  &ht layer5 k4
+#define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
+#define HRMR(k1,k2,k3,k4) &ht layer6 k1  &ht layer7 k2  &ht layer8 k3  &ht RSHFT k4
+#define HRMRB(k1,k2,k3) &ht RALT k1  &ht RCTRL k2  &ht RGUI k3
+
+// Layers
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define layer3  3
+#define layer4  4
+#define layer5  5
+#define layer6  6
+#define layer7  7
+#defome layer8  8
 
 / {
     behaviors {
@@ -37,20 +51,37 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+             &kp IT_Q   &kp IT_W   &kp IT_E   &kp IT_R   &kp IT_T     &kp IT_Y   &kp IT_U   &kp IT_I      &kp IT_O  &kp IT_P      
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
+            HRML (IT_A IT_S       IT_D       IT_F)      &kp IT_G      &kp IT_H   HRMR(IT_J  IT_K          IT_L      IT_QUOT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+            HRMLB(IT_Z IT_X       IT_C       IT_V)      &kp IT_B      &kp IT_N   &kp IT_M   HRMRB(IT_COMM IT_DOT    IT_SLSH)
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                            &kp TAB  &lt LOWER ENTER  &lt RAISE SPACE  &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
-        right_layer {
+        lower_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
+            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
+            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
+            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        raise_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
@@ -67,19 +98,104 @@
             >;
         };
 
-        left_layer {
+        layer3_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
+            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
+            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &kp ESC        &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        layer4_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
+            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
+            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &kp ESC        &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        layer5_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
+            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
+            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &kp ESC        &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        layer6_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
+            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
+            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &kp ESC        &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        layer7_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
+            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
+            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &kp ESC        &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        layer8_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
+            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
+            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
