@@ -9,7 +9,7 @@
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht FUN k2  &ht MOUSE k3  &ht SYM1 k4
 #define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
-#define HRMR(k1,k2,k3,k4) &ht layer6 k1  &ht SYM2 k2  &ht NUM k3  &ht RSHFT k4
+#define HRMR(k1,k2,k3,k4) &ht NAVLEFT k1  &ht SYM2 k2  &ht NUM k3  &ht RSHFT k4
 #define HRMRB(k1,k2,k3) &ht RALT k1  &ht RCTRL k2  &ht RGUI k3
 
 // Layers
@@ -19,7 +19,7 @@
 #define FUN     3
 #define MOUSE   4
 #define SYM1    5
-#define layer6  6
+#define NAVLEFT 6
 #define SYM2    7
 #define NUM     8
 
@@ -187,22 +187,29 @@
             >;
         };
 
-        layer6_layer {
+        navleft_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│          │          │  RPGUP   │          │          │   │          │          │          │          │          │            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //│  LEFT    │   UP     │  DOWN    │  RIGHT   │          │   │          │  LALT    │  ----    │  LGUI    │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //│          │  HOME    │  PGDN    │  END     │          │   │          │          │          │          │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+        //                                 │          │          │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+
+         &trans      &trans      &kp PGUP    &trans     &trans         &trans      &trans      &trans    &trans      &trans
+
+         &kp LEFT    &kp UP      &kp DOWN    &kp RGHT   &trans         &trans      &kp LALT    &none    &kp LGUI    &trans
+
+         &trans      &kp HOME    &kp PGDN    &kp END    &trans         &trans      &trans      &trans    &trans      &trans
+
+                                             &trans     &trans         &trans      &trans 
+
             >;
         };
+
 
        
         sym2_layer {
