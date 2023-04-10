@@ -7,9 +7,9 @@
 #include "mac_ansi_italian.keycodes"
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht FUN k2  &ht MOUSE k3  &ht SYM1 k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht FUN k2  &ht MOUSE k3  &ht MOUSE k4
 #define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
-#define HRMR(k1,k2,k3,k4) &ht NAVLEFT k1  &ht SYM2 k2  &ht NUM k3  &ht RSHFT k4
+#define HRMR(k1,k2,k3,k4) &ht NAVLEFT k1  &ht SYM k2  &ht NUM k3  &ht RSHFT k4
 #define HRMRB(k1,k2,k3) &ht RALT k1  &ht RCTRL k2  &ht RGUI k3
 
 // Layers
@@ -18,10 +18,9 @@
 #define RAISE   2
 #define FUN     3
 #define MOUSE   4
-#define SYM1    5
-#define NAVLEFT 6
-#define SYM2    7
-#define NUM     8
+#define NAVLEFT 5
+#define SYM     6
+#define NUM     7
 
 / {
     behaviors {
@@ -164,29 +163,6 @@
             >;
         };
 
-        sym1_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │    _     │    |     │    '     │          │
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    ^     │    *     │    &     │  ----    │          │   │   #      │    ~     │    \     │          │    "     │
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │    `     │    <     │    >     │    ?     │
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │          │   │          │          │
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-
-
-         &trans      &trans      &trans       &trans     &trans       &trans      &kp IT_UNDS &kp IT_PIPE &kp IT_QUOT &trans
-
-         &kp IT_CIRC &kp IT_ASTR &kp IT_AMPR  &none      &trans       &kp IT_HASH &kp IT_TILD &kp IT_BSLS &trans      &kp IT_DQUO
-
-         &trans      &trans      &trans       &trans     &trans       &trans      &kp IT_GRV  &kp IT_LABK &kp IT_RABK &kp IT_QUES
-
-                                              &trans     &trans       &trans      &trans   
-            >;
-        };
-
         navleft_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -212,23 +188,23 @@
 
 
        
-        sym2_layer {
+        sym_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │    (     │    &     │    )     │          │   │          │          │          │          │          │
+        //│    ~     │    (     │    &     │    )     │    ^     │   │          │          │    |     │    \     │    `     │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    {     │    !     │    @     │    #     │    }     │   │          │ ----     │    =     │    +     │     %    │
+        //│    {     │    !     │    @     │    #     │    }     │   │          │ ----     │          │          │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    [     │    $     │    %     │    ^     │    ]     │   │          │          │          │          │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │          │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
-         &trans      &kp IT_LPRN &kp IT_AMPR &kp IT_RPRN &trans       &trans      &trans     &trans     &trans      &trans
+         &kp IT_TILD &kp IT_LPRN &kp IT_AMPR &kp IT_RPRN &kp IT_CIRC  &trans      &trans    &kp IT_PIPE &kp IT_BSLS &kp IT_GRV
 
-         &kp IT_LCBR &kp IT_EXLM &kp IT_AT   &kp IT_HASH &kp IT_RCBR  &trans      &none      &kp IT_EQL &kp IT_PLUS &kp IT_PERC
+         &kp IT_LCBR &kp IT_EXLM &kp IT_AT   &kp IT_HASH &kp IT_RCBR  &trans      &none     &trans      &trans      &trans
 
-         &kp IT_LBRC &kp IT_DLR  &kp IT_PERC &kp IT_CIRC &kp IT_RBRC  &trans      &trans     &trans     &trans      &trans
+         &kp IT_LBRC &kp IT_DLR  &kp IT_PERC &kp IT_CIRC &kp IT_RBRC  &trans      &trans    &trans      &trans      &trans
 
                                              &trans      &trans      &trans       &trans      
         
