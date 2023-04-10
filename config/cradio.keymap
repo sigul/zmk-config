@@ -76,7 +76,7 @@
                                            │          │          │   │          │   DEL    │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
-           &kp LGUI(Q) &kp LGUI(W) &kp SPACE  &kp LGUI(R) &kp LGUI(Q) &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
+           &kp  LG(Q) &kp  LG(W) &kp SPACE  &kp  LG(R) &kp  LG(Q) &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
           
            &trans      &trans      &trans     &trans      &trans      &kp IT_EGRV &kp LARW    &kp DARW    &kp UARW    &kp RARW
           
