@@ -93,7 +93,7 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │     :    │   ESC    │          │   │          │          │   DEL    │   BSPC   │  DEL     │            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  LOCK    │    %     │     /    │   ENT    │          │   │   DF1    │   MPLY   │   VOLD   │   VOLU   │          │
+        //│  CAPS    │    %     │     /    │   ENT    │          │   │   DF1    │   MPLY   │   VOLD   │   VOLU   │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │    !     │          │   │   DF0    │          │   BRID   │   BRIU   │  RESET   │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
@@ -102,7 +102,7 @@
 
          &trans      &trans      &kp IT_COLN &kp ESC     &trans         &trans   &trans      &kp DEL    &kp BSPC   &kp DEL
 
-         &kp LOCK    &kp IT_PERC &kp IT_SLSH &kp ENT     &trans         DF(1)    &kp MPLY    &kp VOLD   &kp VOLU   &trans
+         &kp CAPS    &kp IT_PERC &kp IT_SLSH &kp ENT     &trans         DF(1)    &kp MPLY    &kp VOLD   &kp VOLU   &trans
 
          &trans      &trans      &trans      &kp IT_EXLM &trans         DF(0)    &trans      &kp BRID   &kp BRIU   RESET
 
