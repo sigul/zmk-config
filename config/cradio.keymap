@@ -7,7 +7,7 @@
 #include "mac_ansi_italian.keycodes"
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht layer3 k2  &ht layer4 k3  &ht layer5 k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht FUN k2  &ht MOUSE k3  &ht layer5 k4
 #define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
 #define HRMR(k1,k2,k3,k4) &ht layer6 k1  &ht layer7 k2  &ht layer8 k3  &ht RSHFT k4
 #define HRMRB(k1,k2,k3) &ht RALT k1  &ht RCTRL k2  &ht RGUI k3
@@ -17,7 +17,7 @@
 #define LOWER   1 // accents and right nav and cut copy and paste and del NEED TO ADD COMMANDS
 #define RAISE   2
 #define FUN     3
-#define layer4  4
+#define MOUSE   4
 #define layer5  5
 #define layer6  6
 #define layer7  7
@@ -140,20 +140,27 @@
             >;
         };
 
-        layer4_layer {
+        mouse_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│          │          │          │          │          │   │          │          │          │          │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //│          │   BTN2   │  ----    │   BTN1   │          │   │          │          │          │          │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //│          │          │          │          │          │   │          │          │          │          │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+        //                                 │          │          │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+
+
+         &trans         &trans      &trans   &trans      &trans        &trans     &kp BTN1   &kp WH_U   &kp BTN2   &trans
+
+         &trans         &kp BTN2    &none    &kp BTN1    &trans        &trans     &kp MS_L   &kp MS_D   &kp MS_U   &kp MS_R
+
+         &trans         &trans      &trans   &trans      &trans        &trans     &kp WH_L   &kp WH_D   &kp WH_R   &trans
+
+                                             &trans      &trans        &trans     &trans  
+
             >;
         };
 
