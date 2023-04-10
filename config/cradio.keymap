@@ -54,10 +54,10 @@
             &kp IT_Q   &kp IT_W   &kp IT_E   &kp IT_R   &kp IT_T     &kp IT_Y   &kp IT_U   &kp IT_I      &kp IT_O  &kp IT_P      
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            HRML (IT_A,IT_S,      IT_D,      IT_F)      &kp IT_G      &kp IT_H   HRMR(IT_J, IT_K,         IT_L,     IT_QUOT)
+            HRML (IT_A, IT_S,      IT_D,      IT_F)      &kp IT_G      &kp IT_H   HRMR(IT_J, IT_K,         IT_L,     IT_QUOT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            HRMLB(IT_Z,IT_X,      IT_C,      IT_V)      &kp IT_B      &kp IT_N   &kp IT_M   HRMRB(IT_COMM,IT_DOT,   IT_SLSH)
+            HRMLB(IT_Z, IT_X,      IT_C,      IT_V)      &kp IT_B      &kp IT_N   &kp IT_M   HRMRB(IT_COMM, IT_DOT,   IT_SLSH)
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &kp TAB  &lt LOWER ENTER  &lt RAISE SPACE  &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
