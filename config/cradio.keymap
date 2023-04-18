@@ -20,6 +20,8 @@
 #define SYM     4
 #define FUN     5
 #define NUM     6
+#define TRI     7
+
 
 / {
     behaviors {
@@ -100,7 +102,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │     (    │    !     │          │   │          │          │BRIGHT UP │BRIGHT DOW│          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │   TAB    │   │  ----    │          │
+        //                                 │          │          │   │  ----    │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
          &trans      &trans      &kp IT_COLN &kp ESC     &trans        &trans     &trans    &kp DEL      &kp BSPC     &trans 
@@ -109,7 +111,7 @@
 
          &trans      &trans      &kp IT_LPRN &kp IT_EXLM &trans        &trans     &trans    &kp C_BRI_UP &kp C_BRI_DN &trans 
 
-                                             &trans      &kp TAB       &none      &trans 
+                                             &trans      &trans       &none      &trans 
             >;
         };
 
