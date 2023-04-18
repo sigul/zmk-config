@@ -101,10 +101,10 @@
 #define IT_LCCE LS(IT_OGRV) // ç
 #define IT_DEG  LS(IT_AGRV) // °
 // Row 4
-#define IT_PIPE LS(IT_BSLS) // | (not physically present)
+#define IT_PIPE LS(IT_SLSH) // | (not physically present)
 #define IT_SCLN LS(IT_COMM) // ;
 #define IT_COLN LS(IT_DOT)  // :
-#define IT_UNDER LS(IT_MINS) // _
+#define IT_UNDER LS(IT_MINUS) // _
 
 /* Alted symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬─────┐
