@@ -144,8 +144,8 @@
 #define IT_OE   LA(IT_I)    // Œ
 #define IT_OSTR LA(IT_O)    // Ø
 #define IT_PI   LA(IT_P)    // π
-#define IT_LBTK LA(IT_EGRV) // [
-#define IT_RBTK LA(IT_PLUS) // ]
+#define IT_LBKT LA(IT_EGRV) // [
+#define IT_RBKT LA(IT_PLUS) // ]
 // Row 3
 #define IT_ARNG LA(IT_A)    // Å
 #define IT_SS   LA(IT_S)    // ß
