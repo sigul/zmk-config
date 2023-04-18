@@ -7,9 +7,9 @@
 #include "mac_ansi_italian.keycodes"
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LGUI k3  &ht SUP k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LGUI k3  &lt SUP k4
 #define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
-#define HRMR(k1,k2,k3,k4) &ht SYM k1  &ht FUN k2  &ht NUM k3  &ht RSHFT k4
+#define HRMR(k1,k2,k3,k4) &lt SYM k1  &lt FUN k2  &lt NUM k3  &ht RSHFT k4
 #define HRMRB(k1,k2,k3) &ht RALT k1  &ht RCTRL k2  &ht RGUI k3
 
 // Layers
@@ -23,6 +23,7 @@
 #define TRI     7
 
 
+/ {
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -55,7 +56,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , ;      │ . :      │ /        │  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │  TAB     │LOWER ENT │   │RAISE SPC │   BSPC   │
+        //                                 │  TAB     │LOWER BSP │   │RAISE SPC │   BSPC   │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             
             &kp IT_Q    &kp IT_W   &kp IT_E   &kp IT_R   &kp IT_T     &kp IT_Y   &kp IT_U   &kp IT_I       &kp IT_O &kp IT_P      
@@ -63,8 +64,8 @@
             HRML(IT_A,  IT_S,      IT_D,      IT_F)      &kp IT_G     &kp IT_H   HRMR(IT_J, IT_K,          IT_L,    IT_QUOT)
 
             HRMLB(IT_Z, IT_X,      IT_C)      &kp IT_V   &kp IT_B     &kp IT_N   &kp IT_M   HRMRB(IT_COMM, IT_DOT,  IT_SLSH)
-                                              
-                                         &kp TAB    &lt LOWER ENTER  &lt RAISE SPACE  &kp BSPC
+                                                                        
+                                         &kp TAB    &lt LOWER BSPC  &lt RAISE SPACE  &kp BSPC
             >;
         };
 
@@ -226,3 +227,4 @@
             >;
         };
     };
+};
