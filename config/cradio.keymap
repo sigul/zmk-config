@@ -61,9 +61,9 @@
             
             &kp IT_Q    &kp IT_W   &kp IT_E   &kp IT_R   &kp IT_T     &kp IT_Y   &kp IT_U   &kp IT_I       &kp IT_O &kp IT_P      
 
-            HRML(IT_A,  IT_S,      IT_D,      IT_F)      &kp IT_G     &kp IT_H   HRMR(IT_J, IT_K,          IT_L,    IT_QUOT)
+            &mt LSFT IT_A  &mt LALT IT_S  &mt LGUI IT_D  &lt SUP IT_F  &kp IT_G     &kp IT_H   &lt SYM IT_J &lt FUN IT_K &lt NUM IT_L &mt RSHFT IT_QUOT
 
-            HRMLB(IT_Z, IT_X,      IT_C)      &kp IT_V   &kp IT_B     &kp IT_N   &kp IT_M   HRMRB(IT_COMM, IT_DOT,  IT_SLSH)
+            &mt LCTRL IT_Z &mt LALT IT_X &mt LGUI IT_C  &kp IT_V   &kp IT_B     &kp IT_N   &kp IT_M   &mt RALT IT_COMM &mt RGUI IT_DOT &mt RCTRL IT_SLSH
                                                                         
                                          &kp TAB    &lt LOWER BSPC  &lt RAISE SPACE  &kp BSPC
             >;
