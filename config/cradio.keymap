@@ -23,7 +23,6 @@
 #define TRI     7
 
 
-/ {
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -227,4 +226,3 @@
             >;
         };
     };
-};
