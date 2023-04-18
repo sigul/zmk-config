@@ -125,7 +125,7 @@
 #define IT_LDQU LA(IT_2)    // “
 #define IT_LSQU LA(IT_3)    // ‘
 #define IT_YEN  LA(IT_4)    // ¥
-#define IT_TILD LA(IT_5)    // ~
+#define IT_TILDE LA(IT_5)    // ~
 #define IT_LSAQ LA(IT_6)    // ‹
 #define IT_DIV  LA(IT_7)    // ÷
 #define IT_ACUT LA(IT_8)    // ´ (dead)
