@@ -75,7 +75,7 @@
             &trans     &kp IT_LBKT   &kp IT_LBRC   &kp IT_RBRC   &trans         &kp IT_CARET  &kp IT_LPAR   &kp IT_RPAR   &kp IT_RBKT   &kp IT_TILDE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp IT_EXCL   &kp IT_AT     &kp IT_HASH   &kp IT_DLLR   &kp IT_PRCNT      &kp IT_ASTRK  &kp IT_MINUS  &kp IT_EQUAL  &kp IT_BSLH   &kp IT_GRAVE
+            &kp IT_EXCL &kp IT_AT &kp IT_HASH &kp IT_DLLR &kp IT_PRCNT &kp IT_ASTRK &kp IT_MINUS &kp IT_EQUAL &kp IT_BSLH &kp IT_GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
             &trans     &trans     &trans     &trans     &trans         &kp IT_AMPS   &kp IT_UNDER  &kp IT_PLUS   &kp IT_PIPE   &trans
