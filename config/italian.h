@@ -14,7 +14,7 @@
  * └─────┴────┴─────┴───────────────────────┴─────┴────┴─────┘
  */
 // Row 1
-#define IT_LABK LS(TILDE)  // <
+#define IT_LT LS(TILDE)  // <
 #define IT_1    1    // 1
 #define IT_2    2    // 2
 #define IT_3    3    // 3
@@ -80,7 +80,7 @@
  * └─────┴────┴─────┴───────────────────────┴─────┴────┴─────┘
  */
 // Row 1
-#define IT_RABK TILDE // >
+#define IT_GT TILDE // >
 #define IT_EXCL LS(IT_1)    // !
 #define IT_DQUO LS(IT_2)    // "
 #define IT_PND  LS(IT_3)    // £
@@ -120,7 +120,7 @@
  * └─────┴────┴─────┴───────────────────────┴─────┴────┴─────┘
  */
 // Row 1
-#define IT_LTEQ LA(IT_LABK) // ≤
+#define IT_LTEQ LA(IT_LT) // ≤
 #define IT_LDAQ LA(IT_1)    // «
 #define IT_LDQU LA(IT_2)    // “
 #define IT_LSQU LA(IT_3)    // ‘
@@ -186,7 +186,7 @@
  * └─────┴────┴─────┴───────────────────────┴─────┴────┴─────┘
  */
 // Row 1
-#define IT_GTEQ LS(LA(IT_LABK)) // ≥
+#define IT_GTEQ LS(LA(IT_LT)) // ≥
 #define IT_RDAQ LS(LA(IT_1))    // »
 #define IT_RDQU LS(LA(IT_2))    // ”
 #define IT_RSQU LS(LA(IT_3))    // ’
