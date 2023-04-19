@@ -14,7 +14,7 @@
  * └─────┴────┴─────┴───────────────────────┴─────┴────┴─────┘
  */
 // Row 1
-#define IT_LABK LT  // <
+#define IT_LABK LS(TILDE)  // <
 #define IT_1    1    // 1
 #define IT_2    2    // 2
 #define IT_3    3    // 3
@@ -62,7 +62,7 @@
 #define IT_B    B    // B
 #define IT_N    N    // N
 #define IT_M    M    // M
-#define IT_COMM COMMA// ,
+#define IT_COMMA COMMA// ,
 #define IT_DOT  DOT  // .
 #define IT_MINUS SLASH // -
 
@@ -80,7 +80,7 @@
  * └─────┴────┴─────┴───────────────────────┴─────┴────┴─────┘
  */
 // Row 1
-#define IT_RABK GT // >
+#define IT_RABK TILDE // >
 #define IT_EXCL LS(IT_1)    // !
 #define IT_DQUO LS(IT_2)    // "
 #define IT_PND  LS(IT_3)    // £
@@ -91,7 +91,7 @@
 #define IT_LPAR LS(IT_8)    // (
 #define IT_RPAR LS(IT_9)    // )
 #define IT_EQUAL  LS(IT_0)    // =
-#define IT_QUES LS(IT_QUOT) // ?
+#define IT_QMARK LS(IT_QUOT) // ?
 #define IT_CARET LS(IT_IGRV) // ^
 // Row 2
 #define IT_EACU LS(IT_EGRV) // é
@@ -102,7 +102,7 @@
 #define IT_DEG  LS(IT_AGRV) // °
 // Row 4
 #define IT_PIPE LS(IT_SLSH) // | (not physically present)
-#define IT_SCLN LS(IT_COMM) // ;
+#define IT_SCLN LS(IT_COMMA) // ;
 #define IT_COLN LS(IT_DOT)  // :
 #define IT_UNDER LS(IT_MINUS) // _
 
@@ -168,9 +168,9 @@
 #define IT_INTG LA(IT_B)    // ∫
 #define IT_STIL LA(IT_N)    // ˜ (dead)
 #define IT_MICR LA(IT_M)    // µ
-#define IT_ELLP LA(IT_COMM) // …
+#define IT_ELLP LA(IT_COMMA) // …
 #define IT_BULT LA(IT_DOT)  // •
-#define IT_NDSH LA(IT_MINS) // –
+#define IT_NDSH LA(IT_MINUS) // –
 
 /* Shift+Alted symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬─────┐
@@ -227,4 +227,4 @@
 #define IT_COAC LS(LA(IT_N))    // Ó
 #define IT_CUAC LS(LA(IT_M))    // Ú
 #define IT_MDDT LS(LA(IT_DOT))  // ·
-#define IT_MDSH LS(LA(IT_MINS)) // —
+#define IT_MDSH LS(LA(IT_MINUSS)) // —
