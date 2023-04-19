@@ -14,7 +14,7 @@
  * └─────┴────┴─────┴───────────────────────┴─────┴────┴─────┘
  */
 // Row 1
-#define IT_LT LS(IT_GT)  // <
+#define IT_LT   GRAVE // <
 #define IT_1    N1    // 1
 #define IT_2    N2    // 2
 #define IT_3    N3    // 3
