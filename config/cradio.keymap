@@ -72,7 +72,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans   &kp LA(IT_EGRV) &kp IT_LBRC kp IT_RBRC &trans   &kp IT_CARET  &kp LS(IT_8) &kp IT_LS(IT_9) &kp LA(IT_PLUS) &kp LA(5)
+            &trans   &kp LA(IT_EGRV) &kp IT_LBRC kp IT_RBRC &trans   &kp IT_CARET  &kp LS(IT_8) &kp IT_LS(IT_9) &kp LA(IT_PLUS) &kp LA(N5)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
             &kp IT_EXCL &kp IT_AT &kp IT_HASH &kp IT_DLLR &kp IT_PRCNT &kp IT_ASTRK &kp IT_MINUS &kp IT_EQUAL &kp IT_BSLH &kp IT_GRAVE

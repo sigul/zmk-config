@@ -15,16 +15,16 @@
  */
 // Row 1
 #define IT_LT LS(TILDE)  // <
-#define IT_1    1    // 1
-#define IT_2    2    // 2
-#define IT_3    3    // 3
-#define IT_4    4    // 4
-#define IT_5    5    // 5
-#define IT_6    6    // 6
-#define IT_7    7    // 7
-#define IT_8    8    // 8
-#define IT_9    9    // 9
-#define IT_0    0    // 0
+#define IT_1    N1    // 1
+#define IT_2    N2    // 2
+#define IT_3    N3    // 3
+#define IT_4    N4    // 4
+#define IT_5    N5    // 5
+#define IT_6    N6    // 6
+#define IT_7    N7    // 7
+#define IT_8    N8    // 8
+#define IT_9    N9    // 9
+#define IT_0    N0    // 0
 #define IT_QUOT MINUS// '
 #define IT_IGRV EQUAL// ì
 // Row 2
