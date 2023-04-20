@@ -62,7 +62,7 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  CMD(Q)  │  CMD(W)  │  SPACE   │  CMD(R)  │  CMD(T)  │   │    é     │    ù     │    ì     │    ò     │    à     │     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  LCTRL   │   LALT   │  LGUI    │  LSHFT   │  BSPC    │   │    è     │   LEFT   │   DOWN   │   UP     │   RIGHT  │
+        //│          │          │          │          │  BSPC    │   │    è     │   LEFT   │   DOWN   │   UP     │   RIGHT  │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │   CUT    │  COPY    │  PASTE   │  DEL     │   │          │          │    <     │    >     │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
@@ -71,7 +71,7 @@
 
            &kp  LG(Q)  &kp LG(W)  &kp SPACE  &kp LG(R)   &kp LG(T)   &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
             
-           &kp LCTRL   &kp LALT   &kp LGUI   &kp LSHFT   &kp BSPC    &kp IT_EGRV &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT
+           &trans   &trans   &trans   &trans   &kp BSPC    &kp IT_EGRV &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT
           
            &trans      &kp LG(X)  &kp LG(C)  &kp LG(V)   &kp DEL     &trans      &trans      &kp IT_LT &kp IT_GT &trans
           
@@ -83,20 +83,20 @@
         raise_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │     :    │   ESC    │          │   │          │          │   DEL    │   BSPC   │          │            
+        //│  CMD TAB │          │     :    │   ESC    │          │   │          │          │   DEL    │   BSPC   │          │            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CAPS    │    %     │     )    │   ENT    │          │   │          │          │   VOLD   │   VOLU   │  PLAY    │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │     (    │    !     │          │   │          │          │BRIGHT UP │BRIGHT DOW│          │
+        //│  CAPSW   │          │     (    │    !     │          │   │          │          │BRIGHT UP │BRIGHT DOW│          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │          │   │  ----    │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
-         &trans      &trans      &kp IT_COLN &kp ESC     &trans        &trans     &trans    &kp DEL      &kp BSPC     &trans 
+         &kp LG(TAB)      &trans      &kp IT_COLN &kp ESC     &trans        &trans     &trans    &kp DEL      &kp BSPC     &trans 
 
          &kp CAPS    &kp IT_PRCNT &kp IT_RPAR &kp ENTER   &trans        &trans     &trans    &kp VOLD     &kp VOLU     &kp K_PLAY_PAUSE
 
-         &trans      &trans      &kp IT_LPAR &kp IT_EXCL &trans        &trans     &trans    &kp C_BRI_UP &kp C_BRI_DN &trans 
+         &caps_word      &trans      &kp IT_LPAR &kp IT_EXCL &trans        &trans     &trans    &kp C_BRI_UP &kp C_BRI_DN &trans 
 
                                              &trans      &trans       &none      &trans 
             >;
@@ -179,7 +179,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    0     │    1     │    2     │    3     │          │   │          │    -     │    +     │  ----    │    $     │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │    4     │    5     │    6     │          │   │          │          │          │          │          │
+        //│          │    4     │    5     │    6     │          │   │          │    –     │          │          │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │    :     │   │    =     │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -187,7 +187,7 @@
 
          &trans        &kp N7       &kp N8      &kp N9     &trans         &trans    &kp IT_UNDER  &kp IT_ASTRK &trans    &trans
 
-         &kp N0        &kp N1       &kp N2      &kp N3     &trans         &trans    &kp IT_MINUS  &kp IT_PLUS &none     &kp IT_DLLR
+         &kp N0        &kp N1       &kp N2      &kp N3     &trans         &trans    &kp IT_MINUS  &kp RBRC &none     &kp IT_DLLR
    
          &trans        &kp N4       &kp N5      &kp N6     &trans         &trans    &kp LA(IT_MINUS)  &trans      &trans    &trans
 

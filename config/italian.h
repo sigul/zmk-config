@@ -39,7 +39,7 @@
 #define IT_O    O    // O
 #define IT_P    P    // P
 #define IT_EGRV LBKT // è
-#define IT_PLUS RBRC // +
+#define IT_PLUS RBKT // +
 #define IT_UGRV BSLH // ù
 // Row 3
 #define IT_A    A    // A
