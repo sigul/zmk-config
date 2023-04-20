@@ -151,7 +151,7 @@
         //                                 │          │          │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
-         &kp IT_TILDE &kp IT_LPAR &kp IT_AMPS &kp IT_RPAR &kp IT_CARET  &trans      &trans    &kp IT_PIPE &kp IT_BSLH &kp IT_GRVAVE
+         &kp IT_TILDE &kp IT_LPAR &kp IT_AMPS &kp IT_RPAR &kp IT_CARET  &trans      &trans    &kp IT_PIPE &kp IT_BSLH &kp IT_GRAVE
 
          &kp IT_LBKT &kp IT_EXCL &kp IT_AT   &kp IT_HASH &kp IT_RBKT  &trans      &none     &trans      &trans      &trans
 
