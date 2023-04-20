@@ -205,7 +205,7 @@
          &kp 0         &kp 1       &kp 2      &kp 3     &trans         &trans    &kp IT_MINUS  &kp IT_PLUS &none     &kp IT_DLLR
    
          &trans        &kp 4       &kp 5      &kp 6     &trans         &trans    &kp LA(IT_MINUS)  &trans      &trans    &trans
-∂
+
                                               &trans    &kp IT_COLN    &kp IT_EQUAL &trans   
             >;
         };
