@@ -83,7 +83,7 @@
         raise_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  CMD TAB │          │     :    │   ESC    │          │   │          │          │   DEL    │   BSPC   │          │            
+        //│  TAB     │          │     :    │   ESC    │          │   │          │          │   DEL    │   BSPC   │          │            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CAPS    │    %     │     )    │   ENT    │          │   │          │          │   VOLD   │   VOLU   │  PLAY    │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -92,7 +92,7 @@
         //                                 │          │          │   │  ----    │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
-         &kp LG(TAB)      &trans      &kp IT_COLN &kp ESC     &trans        &trans     &trans    &kp DEL      &kp BSPC     &trans 
+         &kp TAB      &trans      &kp IT_COLN &kp ESC     &trans        &trans     &trans    &kp DEL      &kp BSPC     &trans 
 
          &kp CAPS    &kp IT_PRCNT &kp IT_RPAR &kp ENTER   &trans        &trans     &trans    &kp VOLD     &kp VOLU     &kp K_PLAY_PAUSE
 
@@ -175,21 +175,21 @@
         num_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │    7     │    8     │    9     │          │   │          │    _     │    *     │          │          │
+        //│          │    7     │    8     │    9     │          │   │          │    –     │    *     │          │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    0     │    1     │    2     │    3     │          │   │          │    -     │    +     │  ----    │    $     │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │    4     │    5     │    6     │          │   │          │    –     │          │          │          │
+        //│          │    4     │    5     │    6     │          │   │          │    _     │          │          │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │    :     │   │    =     │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
 
-         &trans        &kp N7       &kp N8      &kp N9     &trans         &trans    &kp IT_UNDER  &kp IT_ASTRK &trans    &trans
+         &trans        &kp N7       &kp N8      &kp N9     &trans         &trans    &kp LA(IT_MINUS)  &kp IT_ASTRK &trans    &trans
 
-         &kp N0        &kp N1       &kp N2      &kp N3     &trans         &trans    &kp IT_MINUS  &kp RBRC &none     &kp IT_DLLR
+         &kp N0        &kp N1       &kp N2      &kp N3     &trans         &trans    &kp IT_MINUS  &kp IT_PLUS &none     &kp IT_DLLR
    
-         &trans        &kp N4       &kp N5      &kp N6     &trans         &trans    &kp LA(IT_MINUS)  &trans      &trans    &trans
+         &trans        &kp N4       &kp N5      &kp N6     &trans         &trans    &kp IT_UNDER  &trans      &trans    &trans
 
                                               &trans    &kp IT_COLN    &kp IT_EQUAL &trans   
             >;
