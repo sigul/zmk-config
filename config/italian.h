@@ -101,7 +101,7 @@
 #define IT_LCCE LS(IT_OGRV) // ç
 #define IT_DEG  LS(IT_AGRV) // °
 // Row 4
-#define IT_PIPE LS(IT_SLSH) // | (not physically present)
+#define IT_PIPE LS(IT_BSLH) // | (not physically present)
 #define IT_SCLN LS(IT_COMMA) // ;
 #define IT_COLN LS(IT_DOT)  // :
 #define IT_UNDER LS(IT_MINUS) // _
@@ -160,7 +160,7 @@
 #define IT_HASH LA(IT_AGRV) // #
 #define IT_PILC LA(IT_UGRV) // ¶
 // Row 4
-#define IT_GRAVE  LA(IT_SLSH) // ` (not physically present)
+#define IT_GRAVE LA(IT_BSLH) // ` (not physically present)
 #define IT_NARS LA(IT_Z)    // ∑
 #define IT_DAGG LA(IT_X)    // †
 #define IT_COPY LA(IT_C)    // ©

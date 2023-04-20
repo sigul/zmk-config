@@ -24,6 +24,18 @@
 
 
 / {
+    behaviors {
+         ht: hold_tap {
+             label = "hold_tap";
+             compatible = "zmk,behavior-hold-tap";
+             #binding-cells = <2>;
+             flavor = "tap-preferred";
+             tapping-term-ms = <220>;
+             quick-tap-ms = <150>;
+             global-quick-tap;
+             bindings = <&kp>, <&kp>;
+         };
+     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -44,7 +56,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , ;      │ . :      │ /        │  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │  TAB     │LOWER BSP │   │RAISE SPC │   BSPC   │
+        //                                 │  ENT     │LOWER BSP │   │RAISE SPC │   BSPC   │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             
             &kp IT_Q    &kp IT_W   &kp IT_E   &kp IT_R   &kp IT_T     &kp IT_Y   &kp IT_U   &kp IT_I       &kp IT_O &kp IT_P      
@@ -53,7 +65,7 @@
 
             HRMLB(IT_Z, IT_X, IT_C)  &kp IT_V   &kp IT_B     &kp IT_N   &kp IT_M   HRMRB(IT_COMMA, IT_DOT, IT_SLSH)
                                                                         
-                                         &kp TAB    &lt LOWER BSPC  &lt RAISE SPACE  &kp BSPC
+                                         &kp ENT    &lt LOWER BSPC  &lt RAISE SPACE  &kp BSPC
             >;
         };
 
@@ -66,7 +78,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │   CUT    │  COPY    │  PASTE   │  DEL     │   │          │          │    <     │    >     │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │  ----    │   │          │   DEL    │
+        //                                 │          │  ----    │   │          │   DEL    │ 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
            &kp  LG(Q)  &kp LG(W)  &kp SPACE  &kp LG(R)   &kp LG(T)   &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
@@ -83,7 +95,7 @@
         raise_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │     :    │   ESC    │          │   │          │          │   DEL    │   BSPC   │          │            
+        //│          │    TAB   │     :    │   ESC    │          │   │          │          │   DEL    │   BSPC   │          │            
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CAPS    │    %     │     )    │   ENT    │          │   │          │          │   VOLD   │   VOLU   │  PLAY    │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -92,7 +104,7 @@
         //                                 │          │          │   │  ----    │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
-         &trans      &trans      &kp IT_COLN &kp ESC     &trans        &trans     &trans    &kp DEL      &kp BSPC     &trans 
+         &trans      &kp TAB      &kp IT_COLN &kp ESC     &trans        &trans     &trans    &kp DEL      &kp BSPC     &trans 
 
          &kp CAPS    &kp IT_PRCNT &kp IT_RPAR &kp ENTER   &trans        &trans     &trans    &kp VOLD     &kp VOLU     &kp K_PLAY_PAUSE
 
@@ -125,20 +137,20 @@
         };
 
         sym_layer {
-            bindings = <
+            bindings = < ~(&)^[!@#}{$%^}]/\⁄/⁄+^/\⁄
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│    ~     │    (     │    &     │    )     │    ^     │   │          │          │    |     │    \     │    `     │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    {     │    !     │    @     │    #     │    }     │   │          │ ----     │          │          │          │
+        //│    [     │    !     │    @     │    #     │    ????  │   │  RA(RBRC)│ ----     │          │          │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    [     │    $     │    %     │    ^     │    ]     │   │          │          │          │          │          │
+        //│    {     │    $     │    %     │    ^     │    }     │   │          │          │          │          │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │          │   │          │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
          &kp IT_TILDE &kp IT_LPAR &kp IT_AMPS &kp IT_RPAR &kp IT_CARET  &trans      &trans    &kp IT_PIPE &kp IT_BSLH &kp IT_GRAVE
 
-         &kp IT_LBKT &kp IT_EXCL &kp IT_AT   &kp IT_HASH &kp IT_RBKT  &trans      &none     &trans      &trans      &trans
+         &kp IT_LBKT &kp IT_EXCL &kp IT_AT   &kp IT_HASH &kp LA(RBRC)  RA(RBRC)      &none     &trans      &trans      &trans
 
          &kp IT_LBRC &kp IT_DLLR  &kp IT_PRCNT &kp IT_CARET &kp IT_RBRC  &trans      &trans    &trans      &trans      &trans
 
