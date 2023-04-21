@@ -56,7 +56,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , ;      │ . :      │ /        │  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │  TAB     │LOWER BSP │   │RAISE SPC │   BSPC   │
+        //                                 │  CMD/ENT │LOWER BSP │   │RAISE SPC │   BSPC   │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             
             &kp IT_Q    &kp IT_W   &kp IT_E   &kp IT_R   &kp IT_T     &kp IT_Y   &kp IT_U   &kp IT_I       &kp IT_O &kp IT_P      
@@ -65,7 +65,7 @@
 
             HRMLB(IT_Z, IT_X, IT_C)  &kp IT_V   &kp IT_B     &kp IT_N   &kp IT_M   HRMRB(IT_COMMA, IT_DOT, IT_SLSH)
                                                                         
-                                         &kp TAB    &lt LOWER BSPC  &lt RAISE SPACE  &kp BSPC
+                                         &mt LGUI ENT    &lt LOWER BSPC  &lt RAISE SPACE  &kp BSPC
             >;
         };
 
@@ -101,7 +101,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CAPSW   │          │     (    │    !     │          │   │          │          │BRIGHT UP │BRIGHT DOW│          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │          │   │  ----    │          │
+        //                                 │   TAB    │          │   │  ----    │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
          &kp TAB      &trans      &kp IT_COLN &kp ESC     &trans        &trans     &trans    &kp DEL      &kp BSPC     &trans 
@@ -110,7 +110,7 @@
 
          &caps_word      &trans      &kp IT_LPAR &kp IT_EXCL &trans        &trans     &trans    &kp C_BRI_UP &kp C_BRI_DN &trans 
 
-                                             &trans      &trans       &none      &trans 
+                                             &kp TAB          &trans       &none      &trans 
             >;
         };
 
