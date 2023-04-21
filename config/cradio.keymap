@@ -65,7 +65,7 @@
 
             HRMLB(IT_Z, IT_X, IT_C)  &kp IT_V   &kp IT_B     &kp IT_N   &kp IT_M   HRMRB(IT_COMMA, IT_DOT, IT_SLSH)
                                                                         
-                                         &mt LGUI ENT    &lt LOWER BSPC  &lt RAISE SPACE  &kp BSPC
+                                         &mt LGUI ENTER    &lt LOWER BSPC  &lt RAISE SPACE  &kp BSPC
             >;
         };
 
