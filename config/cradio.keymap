@@ -72,7 +72,7 @@
         lower_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  CMD(Q)  │  CMD(W)  │  SPACE   │  CMD(R)  │  CMD(T)  │   │    é     │    ù     │    ì     │    ò     │    à     │     
+        //│  TAB     │          │  SPACE   │          │          │   │    é     │    ù     │    ì     │    ò     │    à     │     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │  BSPC    │   │    è     │   LEFT   │   DOWN   │   UP     │   RIGHT  │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -81,7 +81,7 @@
         //                                 │          │  ----    │   │          │   DEL    │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
-           &kp  LG(Q)  &kp LG(W)  &kp SPACE  &kp LG(R)   &kp LG(T)   &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
+           &kp TAB  &trans  &kp SPACE  &trans &trans   &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
             
            &trans   &trans   &trans   &trans   &kp BSPC    &kp IT_EGRV &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT
           
