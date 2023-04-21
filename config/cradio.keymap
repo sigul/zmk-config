@@ -7,10 +7,10 @@
 #include "italian.h"
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &mt LSHFT k1  &mt LALT k2  &mt LGUI k3  &lt SUP k4
-#define HRMLB(k1,k2,k3) &mt LCTRL k1  &mt LGUI k2  &mt LALT k3
-#define HRMR(k1,k2,k3,k4) &lt SYM k1  &lt FUN k2  &lt NUM k3  &mt RSHFT k4
-#define HRMRB(k1,k2,k3) &mt RALT k1  &mt RGUI k2  &mt RCTRL k3
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LGUI k3  &lt SUP k4
+#define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
+#define HRMR(k1,k2,k3,k4) &lt SYM k1  &lt FUN k2  &lt NUM k3  &ht RSHFT k4
+#define HRMRB(k1,k2,k3) &ht RALT k1  &ht RGUI k2  &ht RCTRL k3
 
 // Layers
 #define DEFAULT 0
@@ -24,6 +24,18 @@
 
 
 / {
+     behaviors {
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+    };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -112,6 +124,7 @@
         //│          │          │          │          │          │   │          │          │    <     │    >     │    ?     │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │   SPACE  │   │          │          │
+         
          &trans         &kp BSPC    &kp DEL   &trans      &trans        &trans     &trans     &trans      &trans      &trans    
 
          &trans         &trans      &trans    &none       &trans        &trans     &trans     &trans      &trans      &kp IT_DQUO 
