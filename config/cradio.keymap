@@ -124,7 +124,7 @@
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │   SPACE  │   │          │          │
          
-         &trans         &kp BSPC    &kp DEL   &trans      &trans        &trans     &trans   &kp LG(LS(3)))  &kp LG(LS(4)))      &trans    
+         &trans         &kp BSPC    &kp DEL   &trans      &trans        &trans     &trans   &kp LG(LS(3))  &kp LG(LS(4))      &trans    
 
          &trans         &trans      &trans    &none       &trans        &trans     &trans   &kp LG(LC(LS(3))) &kp LG(LC(LS(4))) &kp IT_DQUO 
 
