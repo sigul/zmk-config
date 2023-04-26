@@ -36,20 +36,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-    
-    macros {
-        cmd_fun: cmd_fun {
-            label = "cmd_fun";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <12 13>;
-            wait-ms = <0>; 
-            bindings
-                = <&macro_press &mo FUN &kp LGUI>
-                 , <&macro_pause_for_release>
-                 , <&macro_release &mo FUN &kp LGUI>; <&macro_release &kp LGUI>
-                ;
-        };
-    };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
