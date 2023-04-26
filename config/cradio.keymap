@@ -116,19 +116,19 @@
         sup_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  BSPC    │  DEL     │          │          │   │          │          │          │          │          │
+        //│          │  BSPC    │  DEL     │          │          │   │          │          │ Screen   │ ScreenP  │          │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │  ----    │          │   │          │          │          │          │    "     │
+        //│          │          │          │  ----    │          │   │          │          │ Screen C │ ScreenP C│    "     │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │    <     │    >     │    ?     │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │   SPACE  │   │          │          │
          
-         &trans         &kp BSPC    &kp DEL   &trans      &trans        &trans     &trans     &trans      &trans      &trans    
+         &trans         &kp BSPC    &kp DEL   &trans      &trans        &trans     &trans   &kp LG(LS(3)))  &kp LG(LS(4)))      &trans    
 
-         &trans         &trans      &trans    &none       &trans        &trans     &trans     &trans      &trans      &kp IT_DQUO 
+         &trans         &trans      &trans    &none       &trans        &trans     &trans   &kp LG(LC(LS(3))) &kp LG(LC(LS(4))) &kp IT_DQUO 
 
-         &trans         &trans      &trans    &trans      &trans        &trans     &trans     &kp IT_LT &kp IT_GT &kp IT_QMARK
+         &trans         &trans      &trans    &trans      &trans        &trans     &trans   &kp IT_LT &kp IT_GT &kp IT_QMARK
 
                                               &trans      &kp SPACE     &trans     &trans   
 
