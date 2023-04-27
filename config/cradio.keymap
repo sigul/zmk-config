@@ -36,6 +36,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_cmd {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp LGUI>;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -100,7 +109,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CAPSW   │          │     (    │    !     │          │   │          │          │BRIGHT UP │BRIGHT DOW│          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │   TAB    │          │   │  ----    │          │
+        //                                 │          │  TAB     │   │  ----    │          │
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
          &kp TAB      &trans      &kp IT_COLN &kp ESC     &trans        &trans     &trans    &kp DEL      &kp BSPC     &trans 
@@ -109,7 +118,7 @@
 
          &caps_word      &trans      &kp IT_LPAR &kp IT_EXCL &trans        &trans     &trans    &kp C_BRI_UP &kp C_BRI_DN &trans 
 
-                                             &kp TAB          &trans       &none      &trans 
+                                               &trans    &kp TAB             &none      &trans 
             >;
         };
 
