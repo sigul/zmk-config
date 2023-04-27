@@ -40,7 +40,7 @@
         compatible = "zmk,combos";
         combo_cmd {
             timeout-ms = <50>;
-            key-positions = <12 13>;
+            key-positions = <11 12>;
             bindings = <&kp LGUI>;
         };
     };
