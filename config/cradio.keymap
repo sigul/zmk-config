@@ -99,7 +99,7 @@
 
            &kp TAB  &trans  &kp SPACE  &trans &trans   &kp IT_EACU &kp IT_UGRV &kp IT_IGRV &kp IT_OGRV &kp IT_AGRV
             
-           &trans   &trans   &trans   &kp LSFHT   &kp BSPC    &kp IT_EGRV &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT
+           &trans   &trans   &trans   &kp LSHFT   &kp BSPC    &kp IT_EGRV &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT
           
            &trans      &kp LG(X)  &kp LG(C)  &kp LG(V)   &kp DEL     &trans      &trans      &kp IT_LT &kp IT_GT &trans
           
