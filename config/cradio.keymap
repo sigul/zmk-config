@@ -7,10 +7,10 @@
 #include "italian.h"
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &mt LSHFT k1  &mt LALT k2  &mt LGUI k3  &lt SUP k4
-#define HRMLB(k1,k2,k3) &mt LCTRL k1  &mt LGUI k2  &mt LALT k3
-#define HRMR(k1,k2,k3,k4) &lt SYM k1  &lt FUN k2  &lt NUM k3  &mt RSHFT k4
-#define HRMRB(k1,k2,k3) &mt RALT k1  &mt RGUI k2  &mt RCTRL k3
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LGUI k3  &lt SUP k4
+#define HRMLB(k1,k2,k3) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3
+#define HRMR(k1,k2,k3,k4) &lt SYM k1  &lt FUN k2  &lt NUM k3  &ht RSHFT k4
+#define HRMRB(k1,k2,k3) &ht RALT k1  &ht RGUI k2  &ht RCTRL k3
 
 // Layers
 #define DEFAULT 0
@@ -77,7 +77,7 @@
             
             &kp IT_Q    &kp IT_W   &kp IT_E   &kp IT_R   &kp IT_T     &kp IT_Y   &kp IT_U   &kp IT_I       &kp IT_O &kp IT_P      
 
-            &kp IT_A  &mt LALT IT_S &mt LGUI IT_D &lt SUP IT_F  &kp IT_G     &kp IT_H   HRMR (IT_J, IT_K, IT_L, IT_QUOT)
+            HRML(IT_A, IT_S, IT_D, IT_F)  &kp IT_G     &kp IT_H   HRMR (IT_J, IT_K, IT_L, IT_QUOT)
 
             HRMLB(IT_Z, IT_X, IT_C)  &kp IT_V   &kp IT_B     &kp IT_N   &kp IT_M   HRMRB(IT_COMMA, IT_DOT, IT_SLSH)
                                                                         
