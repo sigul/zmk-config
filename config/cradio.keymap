@@ -29,9 +29,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            tapping-term-ms = <220>;    // <---[[moderate duration]]
             quick-tap-ms = <125>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
@@ -39,7 +39,7 @@
     combos {
         compatible = "zmk,combos";
         combo_cmd {
-            timeout-ms = <200>;
+            timeout-ms = <50>;
             key-positions = <11 12>;
             bindings = <&mo_fun>;
         };
