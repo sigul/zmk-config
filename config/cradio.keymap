@@ -39,7 +39,7 @@
     combos {
         compatible = "zmk,combos";
         combo_cmd {
-            timeout-ms = <150>;
+            timeout-ms = <70>;
             key-positions = <11 12>;
             bindings = <&mo_fun>;
         };
